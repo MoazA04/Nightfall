@@ -24,7 +24,3 @@ html, body { margin: 0; padding: 0; }
   .row p { margin: 0; font-size: 34px; }
 
   .row img { width: 150px; height: auto; display: block; }
-
-body {
-    background-color: white;
-}
