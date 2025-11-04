@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.produkt-tabelle {
+    margin: auto; /* Tabelle links ausgerichtet */
+    border-collapse: separate;
+    border-spacing: 20px;
+}
+
+.produkt-tabelle caption {
+    caption-side: top; /* Caption über der Tabelle */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center; /* Caption zentriert */
+}
+
+.produkt-tabelle td {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.produkt-tabelle img {
+    width: 140px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.preis {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0 0;
+    color: #e60000;
+}
