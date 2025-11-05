@@ -1,40 +1,27 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f2f2f2;
-}
-
-.produkt-tabelle {
-    margin: auto; /* Tabelle links ausgerichtet */
-    border-collapse: separate;
-    border-spacing: 20px;
-}
-
-.produkt-tabelle caption {
-    caption-side: top; /* Caption über der Tabelle */
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center; /* Caption zentriert */
-}
-
-.produkt-tabelle td {
-    background: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.produkt-bereich {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.produkt-tabelle img {
-    width: 140px;
+.produkt-reihe {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.produkt {
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 150px;
+}
+
+.produkt img {
+    width: 100%;
     height: auto;
-    border-radius: 5px;
 }
 
 .preis {
-    font-size: 18px;
+    margin-top: 5px;
     font-weight: bold;
-    margin: 8px 0 0;
-    color: #e60000;
 }
