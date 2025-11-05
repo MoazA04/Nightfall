@@ -7,7 +7,7 @@ html, body { margin: 0; padding: 0; }
   .pink {
     background: pink;
     width: 100%;
-    box-sizing: border-box;   /* damit padding nicht die Breite vergrößert */
+    box-sizing: border-box;   
     padding: 20px 0;          /* vertikales Padding, kein horizontales */
   }
 
