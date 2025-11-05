@@ -1,46 +1,26 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-#indexBody {
+#indexBody{
     background-color: pink;
 }
 
-.pink {
+html, body { margin: 0; padding: 0; }
+
+  .pink {
     background: pink;
-    width: 100vw;                 /* volle Viewport-Breite */
-    
-    /* AUS Containerbreite lösen */
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
+    box-sizing: border-box;   /* damit padding nicht die Breite vergrößert */
+    padding: 20px 0;          /* vertikales Padding, kein horizontales */
+  }
 
-    box-sizing: border-box;
-    padding: 20px 0;
-}
-
-.row {
+  .row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Text ganz links, Bild ganz rechts */
     align-items: center;
     width: 100%;
-    max-width: 1200px;            /* zentrierter Inhalt */
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.row p {
     margin: 0;
-    font-size: 34px;
-}
+    padding: 0 20px;           /* optional: Inhalt etwas vom Rand absetzen */
+    box-sizing: border-box;
+  }
 
-.row img {
-    width: 150px;
-    height: auto;
-    display: block;
-}
+  .row p { margin: 0; font-size: 34px; }
+
+  .row img { width: 150px; height: auto; display: block; }
