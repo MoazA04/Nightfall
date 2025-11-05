@@ -8,44 +8,35 @@
     <link rel="stylesheet" href="style.css">
     <title>Nightfall</title>
 </head>
-<body>
+<body id="indexBody">
 
-    <div class="pink">
-    <div class="row">
-      <p>Nightfall</p>
-      <img src="img/Nightfall.png" alt="Nightfall">
-    </div>
-    </div>
+    <!-- Pinker Kopfbereich -->
+    <header class="pink-header">
+        <div class="header-inner">
+            <p class="title">Nightfall</p>
+            <img src="img/Nightfall.png" alt="Nightfall" class="header-logo">
+        </div>
+    </header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">Startseite</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-border">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="herren.html">Herren</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="damen.html">Damen</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="kinder.html">Kinder</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sonstiges.html">Sonstiges</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="impressum.html">Impressum</a>
-                </li>
+            <ul class="navbar-nav mx-auto"> <!-- zentrierte Links -->
+                <li class="nav-item"><a class="nav-link" href="index.html">Startseite</a></li>
+                <li class="nav-item"><a class="nav-link" href="herren.html">Herren</a></li>
+                <li class="nav-item"><a class="nav-link" href="damen.html">Damen</a></li>
+                <li class="nav-item"><a class="nav-link" href="kinder.html">Kinder</a></li>
+                <li class="nav-item"><a class="nav-link" href="sonstiges.html">Sonstiges</a></li>
+                <li class="nav-item"><a class="nav-link" href="impressum.html">Impressum</a></li>
             </ul>
         </div>
     </nav>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
+
 </html>
