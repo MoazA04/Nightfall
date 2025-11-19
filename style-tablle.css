@@ -25,3 +25,16 @@
     margin-top: 6px;
     font-weight: bold;
 }
+
+.size-picker {
+    width: 100%;
+    padding: 8px;
+    margin: 0 auto;
+    font-size: 14.8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+} 
+
