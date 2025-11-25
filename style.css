@@ -24,3 +24,37 @@ html, body { margin: 0; padding: 0; }
   .row p { margin: 0; font-size: 34px; }
 
   .row img { width: 150px; height: auto; display: block; }
+
+  /* BEAUTIFUL NIGHTFALL FOOTER – FINAL VERSION */
+.nightfall-footer {
+    width: 100%;
+    background: #f7f7f7;
+    border-top: 2px solid #f3b6c5; /* rosa Linie passend zum Header */
+    padding: 22px 0;
+ 
+    /* WICHTIG: nebeneinander */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+ 
+    box-shadow: 0 -3px 8px rgba(0,0,0,0.05);
+    margin-top: 80px;
+ 
+    font-size: 17px;
+    font-weight: 500;
+    color: #333;
+}
+ 
+/* Footer Links */
+.nightfall-footer a {
+    color: #c2185b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+ 
+.nightfall-footer a:hover {
+    color: #9c0f45;
+    text-decoration: underline;
+}
