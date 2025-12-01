@@ -46,15 +46,159 @@ html, body { margin: 0; padding: 0; }
     color: #333;
 }
  
-/* Footer Links */
-.nightfall-footer a {
-    color: #c2185b;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.2s ease;
-}
- 
-.nightfall-footer a:hover {
-    color: #9c0f45;
-    text-decoration: underline;
-}
+.footer {
+            background-color: pink;
+            color: white;
+            padding: 40px 0 30px 0;
+            margin-top: 80px;
+            border-top: 3px solid #ff4081;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: brown;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ff4081;
+            text-decoration: none;
+        }
+        
+        .footer-brand {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+        }
+        
+        .footer-brand h2 {
+            color: #ff4081;
+            font-size: 32px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .footer-brand p {
+            color: #aaa;
+            font-size: 16px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .thumbnail-gallery {
+                justify-content: center;
+            }
+            
+            .thumbnail {
+                width: 160px;
+                height: 160px;
+            }
+            
+            .main-image-container {
+                height: 500px;
+            }
+            
+            .image-title {
+                font-size: 38px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-nav .nav-link {
+                padding: 12px 20px;
+                border-bottom: 1px solid #444;
+            }
+            
+            .navbar-nav .nav-item:last-child .nav-link {
+                border-bottom: none;
+            }
+            
+            .main-image-container {
+                height: 450px;
+            }
+            
+            .image-title {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            
+            .image-subtitle {
+                font-size: 18px;
+            }
+            
+            .collection-year {
+                font-size: 18px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .main-content {
+                padding: 0 15px;
+            }
+            
+            .thumbnail {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .logo {
+                font-size: 36px;
+            }
+            
+            .slogan {
+                font-size: 18px;
+            }
+            
+            .thumbnail-label {
+                font-size: 16px;
+                padding: 10px 5px;
+            }
+            
+            .main-image-container {
+                height: 400px;
+            }
+            
+            .image-title {
+                font-size: 28px;
+            }
+            
+            .image-subtitle {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .thumbnail {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .thumbnail-section h2 {
+                font-size: 24px;
+            }
+            
+            .main-image-container {
+                height: 350px;
+            }
+        }

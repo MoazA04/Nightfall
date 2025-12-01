@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-test.css">
+    <title>test</title>
+</head>
+<div class="container">
+        <div class="product-content">
+            <div class="image-section">
+                <div class="main-image-container">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pullover Frontansicht" class="main-image active" data-id="1">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pullover Detailansicht" class="main-image" data-id="2">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pullover Material" class="main-image" data-id="3">
+                    <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pullover Seitenansicht" class="main-image" data-id="4">
+                    <div class="image-credit">Fotos: Beam</div>
+                </div>
+                
+                <div class="thumbnail-container">
+                    <div class="thumbnail active" data-target="1">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Frontansicht" class="thumbnail-img">
+                        <div class="thumbnail-label">Frontansicht</div>
+                    </div>
+                    <div class="thumbnail" data-target="2">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Detailansicht" class="thumbnail-img">
+                        <div class="thumbnail-label">Detailansicht</div>
+                    </div>
+                    <div class="thumbnail" data-target="3">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Material" class="thumbnail-img">
+                        <div class="thumbnail-label">Material</div>
+                    </div>
+                    <div class="thumbnail" data-target="4">
+                        <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Seitenansicht" class="thumbnail-img">
+                        <div class="thumbnail-label">Seitenansicht</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <div class="product-info">
+                    <h1 class="product-title">Pullover mit Rundhalsausschnitt</h1>
+                    <p class="product-description">Strickpullover mit langen Ärmeln und Rundhalsausschnitt aus Wolle</p>
+                    <p class="product-price">€ 22,00</p>
+                </div>
+                
+                <div class="size-section">
+                    <div class="size-title">Größe wählen</div>
+                    <select class="size-dropdown" id="size-select">
+                        <option value="" disabled selected>Bitte Größe wählen</option>
+                        <option value="XS">XS - Extra Small</option>
+                        <option value="S">S - Small</option>
+                        <option value="M">M - Medium</option>
+                        <option value="L">L - Large</option>
+                        <option value="XL">XL - Extra Large</option>
+                        <option value="XXL">XXL - Extra Extra Large</option>
+                    </select>
+                </div>
+                
+                <div class="favorite-section">
+                    <button class="favorite-btn" id="favorite-btn">
+                        <span class="heart-icon">♥</span>
+                        <span class="favorite-text">Zur Favoriten hinzufügen</span>
+                    </button>
+                </div>
+                
+                <div class="photo-credit">
+                    Fotos: Beam
+                </div>
+                
+                <div class="product-code">
+                    Reihe 99/115231/59 (1)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Thumbnail- und Hauptbild-Interaktion
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImages = document.querySelectorAll('.main-image');
+            const sizeDropdown = document.getElementById('size-select');
+            const favoriteBtn = document.getElementById('favorite-btn');
+            const favoriteText = document.querySelector('.favorite-text');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    const targetId = this.getAttribute('data-target');
+                    
+                    // Aktives Thumbnail aktualisieren
+                    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Hauptbild aktualisieren
+                    mainImages.forEach(img => img.classList.remove('active'));
+                    const targetImage = document.querySelector(`.main-image[data-id="${targetId}"]`);
+                    targetImage.classList.add('active');
+                });
+            });
+            
+            // Größenauswahl-Event
+            sizeDropdown.addEventListener('change', function() {
+                const selectedSize = this.value;
+                if (selectedSize) {
+                    console.log(`Ausgewählte Größe: ${selectedSize}`);
+                    
+                    // Temporäre Bestätigungsmeldung
+                    const originalBorderColor = this.style.borderColor;
+                    this.style.borderColor = '#4CAF50';
+                    
+                    setTimeout(() => {
+                        this.style.borderColor = originalBorderColor;
+                    }, 1000);
+                }
+            });
+            
+            // Favoriten-Button Event
+            favoriteBtn.addEventListener('click', function() {
+                this.classList.toggle('active');
+                
+                if (this.classList.contains('active')) {
+                    favoriteText.textContent = 'Zu Favoriten hinzugefügt';
+                } else {
+                    favoriteText.textContent = 'Zur Favoriten hinzufügen';
+                }
+            });
+            
+            // Größentabelle Link Event
+            document.querySelector('.size-table-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Größentabelle wird angezeigt... (Hier würde normalerweise eine Größentabelle erscheinen)');
+            });
+        });
+    </script>
+</body>
+</html>

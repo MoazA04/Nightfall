@@ -53,45 +53,109 @@
       </nav>
     </head>
 
-    <br />
-    <br />
-
-    <section class="hero">
-        <img src="img/Startseite.png" alt="Family Bild">
-        <div class="hero-text">
-            <h1>Wir sind Nightfall</h1>
-            <p>Bei Nightfall ist für jeden etwas dabei</p>
+      <main class="main-content">
+        <div class="header">
+            <div class="logo">NIGHTFALL</div>
+            <div class="slogan">Bei Nightfall ist für jeden etwas dabei</div>
         </div>
-    </section>
-
-    <!-- KATEGORIEN-GRID -->
-    <section class="categories">
-        <div class="cat-item">
-            <img src="damen.jpg" alt="Herren">
-            <p>DAMEN</p>
+        
+        <!-- Großes eigenes Bild -->
+        <div class="main-image-container">
+            <img src="img/Startseite.png" 
+                 alt="Nightfall Winterkollektion 2025" 
+                 class="main-image">
+            <div class="image-overlay">
+                <div class="image-title">Entdecke die neue Kollektion</div>
+                <div class="image-subtitle">
+                    Modische Kleidung für jeden Anlass.<br>
+                    Entdecke unsere exklusive Winterkollektion 2025.
+                </div>
+                <div class="collection-year"></div>
+            </div>
         </div>
-
-        <div class="cat-item">
-            <img src="herren.jpg" alt="Damen">
-            <p>HERREN</p>
+        
+        <!-- Thumbnail Galerie - ZENTRIERT -->
+        <div class="thumbnail-section">
+            <h2>Unsere Kategorien</h2>
+            <div class="thumbnail-gallery">
+                <!-- Herren -->
+                <a href="herren.html" class="thumbnail">
+                    <img src="img/Herren.png" 
+                         alt="Herren" 
+                         class="thumbnail-image">
+                    <div class="thumbnail-label">Herren</div>
+                </a>
+                
+                <!-- Damen -->
+                <a href="damen.html" class="thumbnail">
+                    <img src="img/Damen.png" 
+                         alt="Damen" 
+                         class="thumbnail-image">
+                    <div class="thumbnail-label">Damen</div>
+                </a>
+                
+                <!-- Kinder -->
+                <a href="kinder.html" class="thumbnail">
+                    <img src="img/Kinder.png" 
+                         alt="Kinder" 
+                         class="thumbnail-image">
+                    <div class="thumbnail-label">Kinder</div>
+                </a>
+                
+                <!-- Home -->
+                <a href="sonstiges.html" class="thumbnail">
+                    <img src="img/Sonstiges.png" 
+                         alt="Sonstiges" 
+                         class="thumbnail-image">
+                    <div class="thumbnail-label">Sonstiges</div>
+                </a>
+            </div>
         </div>
+    </main>
 
-        <div class="cat-item">
-            <a href="kinder.html"><img src="img/Kinder.png" alt="Kinder"></a>
-            <p>KINDER</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const mainImage = document.getElementById('mainImage');
+            const mainImageLabel = document.getElementById('mainImageLabel');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Aktives Thumbnail aktualisieren
+                    thumbnails.forEach(thumb => thumb.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Hauptbild und Label aktualisieren
+                    const newImage = this.getAttribute('data-image');
+                    const category = this.getAttribute('data-category').toUpperCase();
+                    
+                    mainImage.src = newImage;
+                    mainImageLabel.textContent = category;
+                    
+                    // Animationseffekt
+                    mainImage.style.opacity = '0.7';
+                    setTimeout(() => {
+                        mainImage.style.opacity = '1';
+                    }, 200);
+                });
+            });
+            
+            // Hauptbild Click öffnet Großansicht
+            mainImage.addEventListener('click', function() {
+                const currentCategory = mainImageLabel.textContent;
+                alert(`Großansicht für ${currentCategory} Kategorie`);
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+            </div>
         </div>
-
-        <div class="cat-item">
-            <img src="home.jpg" alt="Sonstiges">
-            <p>HOME</p>
-        </div>
-    </section>
-
-   
-
-    <footer class="nightfall-footer">
-      <p><a href="impressum.html">Impressum</a></p>
-      <p><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
